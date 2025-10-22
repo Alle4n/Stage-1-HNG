@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <nav class="top-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" data-testid="nav-profile">Profile</a></li>
+        <li><a href="contact.html" data-testid="nav-contact">Contact</a></li>
+        <li><a href="about.html" data-testid="nav-about">About</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <article data-testid="test-profile-card" class="profile-card">
+        <header class="card-header">
+          <h2 data-testid="test-user-name" class="username">Allen Najjuma</h2>
+        </header>
+
+        <figure class="avatar">
+          <img
+            data-testid="test-user-avatar"
+            src="Allen_Najjuma.jpg"
+            alt="Portrait Image"
+          />
+        </figure>
+
+        <p data-testid="test-user-bio" class="bio">
+          Front-end developer passionate about clean and responsive design.
+          Always learning and sharing.
+        </p>
+
+        <p class="time">
+          Current Time:
+          <span data-testid="test-user-time" id="currentTime"></span>
+        </p>
+
+        <nav aria-label="Social Links">
+          <ul data-testid="test-user-social-links" class="social-links">
+            <li>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-twitter"
+                >Twitter</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-github"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-linkedin"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <section aria-labelledby="hobbies-heading" class="hobbies">
+          <h3 id="hobbies-heading">Hobbies</h3>
+          <ul data-testid="test-user-hobbies">
+            <li>Reading</li>
+            <li>Traveling</li>
+            <li>Coding</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="dislikes-heading" class="dislikes">
+          <h3 id="dislikes-heading">Dislikes</h3>
+          <ul data-testid="test-user-dislikes">
+            <li>Procrastination</li>
+            <li>Spam emails</li>
+            <li>Gossip</li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

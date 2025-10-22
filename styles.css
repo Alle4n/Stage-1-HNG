@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background-color: #f5f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.profile-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card-header h2 {
+  font-size: 1.6rem;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+}
+
+.avatar img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2563eb;
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.2);
+}
+
+.bio {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+  padding: 0 0.5rem;
+}
+
+.time {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 500;
+  border: 1px solid #2563eb;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+  background-color: #2563eb;
+  color: #ffffff;
+  outline: none;
+}
+
+section {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: left;
+}
+
+section h3 {
+  font-size: 1.1rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+section ul {
+  list-style: disc inside;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
