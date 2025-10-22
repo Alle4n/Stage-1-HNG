@@ -1,110 +1,293 @@
+/* RESET & BASE */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  font-family: "Inter", system-ui, sans-serif;
-  background-color: #f5f7fa;
+  background: linear-gradient(135deg, #d0eaff, #f3fff3);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---------------- NAVBAR ---------------- */
+.top-nav {
+  width: 100%;
+  background: #0077cc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.top-nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  list-style: none;
+  gap: 2rem;
+  padding: 1.2rem 0;
+  margin: 0;
 }
 
+.top-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.top-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.top-nav a:hover::after {
+  width: 100%;
+}
+
+.top-nav a:hover {
+  color: #e0f4ff;
+}
+
+/* ---------------- MAIN WRAPPER ---------------- */
+main {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 2rem;
+  padding: 20px;
+}
+
+/* ---------------- PROFILE CARD ---------------- */
 .profile-card {
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   padding: 2rem;
-  max-width: 400px;
-  width: 90%;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
 }
 
 .card-header h2 {
-  font-size: 1.6rem;
-  color: #2563eb;
-  margin-bottom: 0.5rem;
+  color: #007bff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
+/* Avatar */
 .avatar {
   display: flex;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .avatar img {
-  width: 130px;
-  height: 130px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
+  border: 5px solid #007bff;
   object-fit: cover;
-  border: 3px solid #2563eb;
-  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.2);
+  transition: transform 0.3s ease;
 }
 
+.avatar img:hover {
+  transform: scale(1.05);
+}
+
+/* Bio */
 .bio {
-  font-size: 0.95rem;
-  color: #475569;
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 1.5rem;
   line-height: 1.6;
-  padding: 0 0.5rem;
 }
 
+/* Time Display */
 .time {
-  font-size: 0.9rem;
-  color: #64748b;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1.5rem;
 }
 
+/* Social Links */
 .social-links {
   list-style: none;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .social-links a {
+  background-color: #007bff;
+  color: white;
   text-decoration: none;
-  color: #2563eb;
-  font-weight: 500;
-  border: 1px solid #2563eb;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  transition: all 0.2s ease;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
 }
 
-.social-links a:hover,
-.social-links a:focus {
-  background-color: #2563eb;
-  color: #ffffff;
-  outline: none;
+.social-links a:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
 }
 
+/* Sections (Hobbies & Dislikes) */
 section {
-  background: #f8fafc;
-  border-radius: 8px;
-  padding: 1rem;
+  margin-top: 1.5rem;
   text-align: left;
 }
 
 section h3 {
-  font-size: 1.1rem;
-  color: #1e293b;
-  margin-bottom: 0.5rem;
+  color: #007bff;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
 }
+
 section ul {
-  list-style: disc inside;
-  color: #475569;
-  font-size: 0.95rem;
-  line-height: 1.5;
+  list-style-type: circle;
+  padding-left: 1.5rem;
+  color: #555;
+}
+
+/* ---------------- CONTACT PAGE ---------------- */
+.contact-page {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact-page h2 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+  outline: none;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 0.9rem;
+}
+
+.success-message {
+  color: #388e3c;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* ---------------- ABOUT PAGE ---------------- */
+.about-page {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+.about-page h2 {
+  color: #007bff;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.about-page section {
+  margin-bottom: 1.5rem;
+}
+
+.about-page p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  .top-nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .avatar img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .social-links {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .profile-card,
+  .contact-page,
+  .about-page {
+    padding: 1.5rem;
+  }
 }
